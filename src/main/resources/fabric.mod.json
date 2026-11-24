@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "reduced-effects",
+	"version": "${version}",
+	"name": "Reduced Effects",
+	"description": "Reduziert Feuer-Effekte (langsamer, niedriger) und entfernt Explosionen bei Respawn Anchor, TNT und End Crystals",
+	"authors": [
+		"lucae"
+	],
+	"contact": {
+		"homepage": "https://github.com/lucae/reduced-effects",
+		"sources": "https://github.com/lucae/reduced-effects"
+	},
+	"license": "MIT",
+	"icon": "assets/reduced-effects/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.lucae.reducedeffects.ReducedEffects"
+		],
+		"client": [
+			"com.lucae.reducedeffects.client.ReducedEffectsClient"
+		]
+	},
+	"mixins": [
+		"reduced-effects.mixins.json",
+		{
+			"config": "reduced-effects.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
